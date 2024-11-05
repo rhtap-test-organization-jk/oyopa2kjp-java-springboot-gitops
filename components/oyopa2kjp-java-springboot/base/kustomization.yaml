@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: oyopa2kjp-java-springboot
+  janus-idp.io/tekton: oyopa2kjp-java-springboot
+  backstage.io/kubernetes-id: oyopa2kjp-java-springboot
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: oyopa2kjp-java-springboot
+resources:
+- deployment.yaml
+- route.yaml
+- service.yaml
